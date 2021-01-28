@@ -1,0 +1,16 @@
+
+.form-group{margin-left: 20px;
+    margin-top: 50px;}
+   .hr{margin-top: 100px;}
+   .btn
+   { margin-left:20px;
+       margin-right:20px;
+    margin-top:20px;}
+   .bd
+   {  margin:10px 400px 10px 400px;
+       padding:5px 10px 10px 10px;
+       border: 2px solid black;}
+
+       .navbar{justify-content: space-around;
+        font-size: large;
+           }

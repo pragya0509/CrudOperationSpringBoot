@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand navbar-dark bg-light">
+    <div class="nav-link ">Updating user details</div>
+</nav>
+<div class="font-weight-bold text-uppercase btn">{{errorMessage}}</div>
+<div class="bd text-center">
+<div >
+    <div class="form-group  row">
+        <label for="name" class="col-sm-4">Name</label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control ng-pristine ng-untouched ng-valid" id="name" placeholder="Enter your name" required  [(ngModel)]="User.name" name="name">
+        {{errorMessage1}}
+    </div>
+    </div>
+    <div class="form-group  row">
+        <label for="age" class="col-sm-4">Age</label>
+        <div class="col-sm-4">
+        <input type="number" id="age" placeholder="Enter your age" required='required' class="form-control ng-pristine ng-untouched ng-valid" [(ngModel)]="User.age" name="age"/>
+      {{errorMessage2}}</div>
+    </div>
+    <div class="form-group row"> 
+        <label for="salary" class="col-sm-4">Salary</label>
+        <div class="col-sm-4">
+        <input type="number" id="salary" placeholder="Your salary"  required='required' class="form-control ng-pristine ng-untouched ng-valid" [(ngModel)]="User.salary" name="salary" />
+        {{errorMessage3}}</div>
+    </div> 
+</div>
+<div>
+<button class="btn btn-success" (click)="onUpdate()">Update Details</button>
+<button class="btn btn-danger" (click)="onBack()">Back</button>
+</div>
+</div>
+
+
+
+
+

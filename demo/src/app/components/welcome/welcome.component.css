@@ -1,0 +1,11 @@
+.btn-lg
+{ display: block;
+ width:100%;
+ margin-block-end: 30px;
+ margin-block-start: 30px;
+}
+
+.text-center
+{margin-top: 80px;}
+
+.hr{margin-top: 100px;}

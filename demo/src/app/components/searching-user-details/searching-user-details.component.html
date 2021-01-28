@@ -1,0 +1,63 @@
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Search User Details</a>
+
+</nav>
+<div class="text-center">
+<button class="btn btn-danger  "(click)='setValue()'>Search By ID</button>
+<button class="btn btn-danger "(click)='setValueName()'>Search by Name</button>
+</div>
+
+
+<div class=" form bd" *ngIf='ByName'>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name" class="form-control" required [(ngModel)]='Name'/>
+    <button class='btn btn-success' (click)='GetDetails()' >Search</button>
+    <button class='btn btn-secondary' (click)='Refresh()' >Refresh</button>
+</div>
+<div class="form bd" *ngIf='ById'>
+    <label for="name">ID</label>
+    <input type="number" id="name" placeholder="Enter your id" class="form-control" required [(ngModel)]='id'/>
+    <button class='btn btn-success' (click)='GetDetails()' >Search</button>
+    <button class='btn btn-secondary' (click)='Refresh()' >Refresh</button>
+</div>
+<hr/>
+<div *ngIf='errorMessage1'> {{errorMessage1}}</div>
+<div class='table-responsive' *ngIf='Users && Submit'>
+  <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf='Submit'>
+    <a href="#" class="navbar-brand">List of User Details </a>
+   
+</nav>
+    <table class='table'
+            >
+      <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>SALARY</th>
+            <th></th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{Users.id}}</td>
+          <td>{{Users.name}}</td>
+          <td>{{Users.age}}</td>
+          <td>{{Users.salary}}</td>
+          <td>
+                <a class="btn btn-danger" [routerLink]="['/user', Users.id]">
+                  EDIT
+                </a>
+          </td>    
+          <td>
+                <button class="btn btn-warning" (click)='DeleteUser()'>
+                  DELETE
+                </button>
+          </td> 
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
